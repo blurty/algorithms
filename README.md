@@ -8,6 +8,6 @@
 
 ## String Hanndle
 
-* 对字符串进行处理的算法
+*对字符串进行处理的算法*
 
 * [ZigZag Pattern](https://github.com/BlurtHeart/algorithms/tree/master/zigzag_pattern) - 字符串按倒之字型重新排列
