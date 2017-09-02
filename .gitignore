@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+# gogland work directory
+.idea
+
+# golang executable file
+*.exe
