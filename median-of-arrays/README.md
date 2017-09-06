@@ -27,6 +27,8 @@ or a probability distribution, from the lower half.
 >The median of a finite list of numbers can be found by arranging all
 the numbers from lowest value to highest value and picking the middle one.
 
+[维基百科上的定义](https://zh.wikipedia.org/wiki/中位數)
+
 #### Method
 
 ##### 1. Method 1 (Simply count while Merging)
