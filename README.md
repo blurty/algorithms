@@ -28,4 +28,4 @@
 
 *对链表进行处理的算法*
 
-* [linklist](https://github.com/BlurtHeart/algorithms/tree/master/linklist) - 对链表进行一些基础操作的算法
+* [LinkList](https://github.com/BlurtHeart/algorithms/tree/master/linklist) - 对链表进行一些基础操作的算法
