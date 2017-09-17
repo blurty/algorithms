@@ -5,6 +5,9 @@ type ListNode struct {
 	Next *ListNode
 }
 
+// Merge two sorted linked lists and return it as a new list.
+// The new list should be made by splicing together the nodes
+// of the first two lists.
 func MergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	start := &ListNode{}
 	oldStart := start
@@ -31,4 +34,21 @@ func MergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 	}
 
 	return oldStart.Next
+}
+
+// Merge n sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+func MergeNLists(lists []*ListNode) *ListNode {
+	amount := len(lists)
+	interval := 1
+	for interval < amount {
+		for i := 0; i < amount-interval; i += interval * 2 {
+			lists[i] = MergeTwoLists(lists[i], lists[i+interval])
+			interval *= 2
+		}
+	}
+	if amount > 0 {
+		return lists[0]
+	} else {
+		return &ListNode{}
+	}
 }

@@ -39,3 +39,37 @@ func TestMergeTwoLists(t *testing.T) {
 		}
 	}
 }
+
+func TestMergeNLists(t *testing.T) {
+	a := &ListNode{Val: 1}
+	a1 := &ListNode{Val: 2}
+	a2 := &ListNode{Val: 5}
+	a1.Next = a2
+	a.Next = a1
+
+	c := &ListNode{Val: 2}
+	c1 := &ListNode{Val: 3}
+	c2 := &ListNode{Val: 6}
+	c1.Next = c2
+	c.Next = c1
+
+	d := &ListNode{Val: 3}
+	d1 := &ListNode{Val: 4}
+	d2 := &ListNode{Val: 5}
+	d1.Next = d2
+	d.Next = d1
+
+	m := []*ListNode{a, c, d}
+
+	b := MergeNLists(m)
+	bs := convertListToSlice(b)
+	output := []int{1, 2, 2, 3, 3, 4, 5, 5, 6}
+	if len(bs) != len(output) {
+		t.Fatalf("want:%v, got:%v", output, bs)
+	}
+	for i := 0; i < len(bs); i++ {
+		if bs[i] != output[i] {
+			t.Fatalf("want:%v, got:%v", output, bs)
+		}
+	}
+}
