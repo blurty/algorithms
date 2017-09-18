@@ -43,12 +43,12 @@ func MergeNLists(lists []*ListNode) *ListNode {
 	for interval < amount {
 		for i := 0; i < amount-interval; i += interval * 2 {
 			lists[i] = MergeTwoLists(lists[i], lists[i+interval])
-			interval *= 2
 		}
+		interval *= 2
 	}
 	if amount > 0 {
 		return lists[0]
 	} else {
-		return &ListNode{}
+		return nil
 	}
 }
