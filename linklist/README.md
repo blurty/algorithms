@@ -11,6 +11,8 @@
 The new list should be made by splicing together the nodes of
 the first two lists.
 
+[查看代码](https://github.com/BlurtHeart/algorithms/blob/master/linklist/merge.go#L11)
+
 ### merge zero or more sorted lists
 > Merge n sorted linked lists and return it as one sorted list.
 Analyze and describe its complexity.
@@ -29,6 +31,8 @@ Analyze and describe its complexity.
 
 ![](https://github.com/BlurtHeart/markdownphotos/blob/master/algorithms/algorithm-merge_n_sorted_lists.png)
 
+[查看代码](https://github.com/BlurtHeart/algorithms/blob/master/linklist/merge.go#L46)
+
 ## Swap
 
 ### Swap Nodes in Pairs
@@ -36,3 +40,17 @@ Analyze and describe its complexity.
   For example:
   Given 1->2->3->4, you should return the list as 2->1->4->3.
   Your algorithm should use only constant space. You may not modify the values in the list, only nodes itself can be changed.
+
+[查看代码](https://github.com/BlurtHeart/algorithms/blob/master/linklist/merge.go#L75)
+
+### Reverse Nodes in k-Group
+> Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
+  k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.
+  You may not alter the values in the nodes, only nodes itself may be changed.
+  Only constant memory is allowed.
+  For example:
+  Given this linked list: 1->2->3->4->5
+  For k = 2, you should return: 2->1->4->3->5
+  For k = 3, you should return: 3->2->1->4->5
+
+[查看代码](https://github.com/BlurtHeart/algorithms/blob/master/linklist/merge.go#L90)

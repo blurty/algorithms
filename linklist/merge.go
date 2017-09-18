@@ -82,3 +82,29 @@ func SwapPairs(head *ListNode) *ListNode {
 	head.Next = SwapPairs(nextHead)
 	return newHead
 }
+
+// reverse the nodes of a linked list k at a time and return its modified list.
+// k is a positive integer and is less than or equal to the length of the linked
+// list. If the number of nodes is not a multiple of k then left-out nodes in
+// the end should remain as it is.
+func ReverseKGroup(head *ListNode, k int) *ListNode {
+	ptr := head
+	count := 0
+	for ; count < k && ptr != nil; count++ {
+		ptr = ptr.Next
+	}
+	if count == k {
+		ptr := ReverseKGroup(ptr, k)
+		// head - head-pointer to direct part,
+		// ptr - head-pointer to reversed part;
+		// reverse current k-group
+		for ; count > 0; count-- {
+			tmp := head.Next
+			head.Next = ptr
+			ptr = head
+			head = tmp
+		}
+		head = ptr
+	}
+	return head
+}
