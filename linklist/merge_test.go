@@ -73,3 +73,36 @@ func TestMergeNLists(t *testing.T) {
 		}
 	}
 }
+
+func TestSwapPairs(t *testing.T) {
+	a := &ListNode{Val: 1}
+	a1 := &ListNode{Val: 2}
+	a2 := &ListNode{Val: 3}
+	a3 := &ListNode{Val: 4}
+	a2.Next = a3
+	a1.Next = a2
+	a.Next = a1
+
+	b := SwapPairs(a)
+	if b.Val != 2 {
+		t.Fatalf("first node, want:2, got:%d", b.Val)
+	}
+	if b.Next == nil {
+		t.Fatalf("second node, want:1, got:nil")
+	} else if b.Next.Val != 1 {
+		t.Fatalf("second node, want:1, got:%d", b.Next.Val)
+	}
+	if b.Next.Next == nil {
+		t.Fatalf("third node, want:4, got:nil")
+	} else if b.Next.Next.Val != 4 {
+		t.Fatalf("third node, want:4, got:%d", b.Next.Next.Val)
+	}
+	if b.Next.Next.Next == nil {
+		t.Fatalf("forth node, want:3, got:nil")
+	} else if b.Next.Next.Next.Val != 3 {
+		t.Fatalf("third node, want:3, got:%d", b.Next.Next.Next.Val)
+	}
+	if b.Next.Next.Next.Next != nil {
+		t.Fatalf("no fifth node, got:%d", b.Next.Next.Next.Next.Val)
+	}
+}

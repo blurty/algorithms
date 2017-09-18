@@ -52,3 +52,21 @@ func MergeNLists(lists []*ListNode) *ListNode {
 		return nil
 	}
 }
+
+// swap every two adjacent nodes and return its head.
+// Given 1->2->3->4, return the list as 2->1->4->3.
+func SwapPairs(head *ListNode) *ListNode {
+	if head == nil {
+		return nil
+	}
+	ptr := head
+	flag := 0
+	for ptr.Next != nil {
+		if flag%2 == 0 {
+			ptr.Next.Val, ptr.Val = ptr.Val, ptr.Next.Val
+		}
+		ptr = ptr.Next
+		flag++
+	}
+	return head
+}
