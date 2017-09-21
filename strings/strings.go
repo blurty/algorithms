@@ -1,5 +1,9 @@
 package strings
 
+import (
+	"sort"
+)
+
 // returns the index of the first occurrence of needle in haystack,
 // or -1 if needle is not part of haystack.
 func StrStr(haystack string, needle string) int {
@@ -15,4 +19,31 @@ outloop:
 	}
 
 	return -1
+}
+
+// concatenate some strings
+// such as: ["hello", "world"] concat to ["helloworld", "worldhello"]
+func ConcatStrings(words []string) []string {
+	if len(words) < 2 {
+		return words
+	}
+	// for avoid duplicate
+	sort.Strings(words)
+
+	ret := make([]string, 0)
+	for i := 0; i < len(words); i++ {
+		// strip duplicate string
+		if i > 0 && words[i] == words[i-1] {
+			continue
+		}
+		oldWord := words[i]
+		newWords := make([]string, 0)
+		newWords = append(newWords, words[:i]...)
+		newWords = append(newWords, words[i+1:]...)
+		newRet := ConcatStrings(newWords)
+		for _, v := range newRet {
+			ret = append(ret, oldWord+v)
+		}
+	}
+	return ret
 }

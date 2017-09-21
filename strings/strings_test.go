@@ -1,6 +1,8 @@
 package strings
 
 import (
+	"reflect"
+	"sort"
 	"testing"
 )
 
@@ -22,5 +24,16 @@ func TestStrStr(t *testing.T) {
 		if got != v.index {
 			t.Fatalf("want:%d, got:%d", v.index, got)
 		}
+	}
+}
+
+func TestConcatStrings(t *testing.T) {
+	input := []string{"hello", "world", "hi"}
+	want := []string{"helloworldhi", "hellohiworld", "worldhellohi", "worldhihello", "hihelloworld", "hiworldhello"}
+	got := ConcatStrings(input)
+	sort.Strings(want)
+	sort.Strings(got)
+	if !reflect.DeepEqual(want, got) {
+		t.Fatalf("want:%v, got:%v", want, got)
 	}
 }
