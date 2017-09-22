@@ -1,4 +1,4 @@
-package parentheses
+package permutation
 
 //
 func doCombine(strs []string, str string) []string {

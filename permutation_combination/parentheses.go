@@ -1,4 +1,4 @@
-package parentheses
+package permutation
 
 /*
 [
