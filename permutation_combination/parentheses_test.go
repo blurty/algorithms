@@ -35,3 +35,23 @@ func TestGenerateParenthesis(t *testing.T) {
 		}
 	}
 }
+
+func TestLongestValidParentheses(t *testing.T)  {
+	type tester struct {
+		intput string
+		output int
+	}
+	tests := []tester{
+		tester{"()))", 2},
+		tester{"()())", 4},
+		tester{")((", 0},
+		tester{"(())(()", 4},
+		tester{"(", 0},
+	}
+	for _, v := range tests {
+		got := LongestValidParentheses(v.intput)
+		if got != v.output {
+			t.Errorf("want:%v, got:%v", v.output, got)
+		}
+	}
+}
