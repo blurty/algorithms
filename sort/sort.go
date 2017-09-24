@@ -33,3 +33,22 @@ func partition(data []int, low, high int) int {
 	}
 	return low
 }
+
+// insert sort
+func InsertSort(data []int) {
+	for i:=1; i<len(data); i++ {
+		if data[i] < data[i-1] {
+			// x copy as sentry, j act as temp index
+			x, j := data[i], i-1
+			// move item at i-1 to i first
+			data[i] = data[i-1]
+			// lookup the insert position
+			for j>=0 && x < data[j] {
+				data[j+1] = data[j]
+				j--
+			}
+			// insert to the correct position
+			data[j+1] = x
+		}
+	}
+}

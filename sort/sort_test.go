@@ -14,7 +14,10 @@ var sortTests = []sortTester{
 }
 
 func TestBubbleSort(t *testing.T) {
-	for _, v := range sortTests {
+	tests := []sortTester{
+		sortTester{[]int{2, 3, 2, 5, 1}, []int{1, 2, 2, 3, 5}},
+	}
+	for _, v := range tests {
 		BubbleSort(v.input)
 		if !reflect.DeepEqual(v.input, v.output) {
 			t.Errorf("want:%v, got:%v", v.output, v.input)
@@ -23,8 +26,23 @@ func TestBubbleSort(t *testing.T) {
 }
 
 func TestQuickSort(t *testing.T) {
-	for _, v := range sortTests {
+	tests := []sortTester{
+		sortTester{[]int{2, 3, 2, 5, 1}, []int{1, 2, 2, 3, 5}},
+	}
+	for _, v := range tests {
 		QuickSort(v.input)
+		if !reflect.DeepEqual(v.input, v.output) {
+			t.Errorf("want:%v, got:%v", v.output, v.input)
+		}
+	}
+}
+
+func TestInsertSort(t *testing.T) {
+	tests := []sortTester{
+		sortTester{[]int{2, 3, 2, 5, 1}, []int{1, 2, 2, 3, 5}},
+	}
+	for _, v := range tests {
+		InsertSort(v.input)
 		if !reflect.DeepEqual(v.input, v.output) {
 			t.Errorf("want:%v, got:%v", v.output, v.input)
 		}

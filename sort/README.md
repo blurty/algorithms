@@ -25,6 +25,7 @@
 ### 代码
 [传送门](https://github.com/BlurtHeart/algorithms/blob/master/sort/sort.go#L3)    
 
+
 ## 快速排序
 
 ### 基本思想
@@ -55,3 +56,26 @@
 
 ### 代码
 [传送门](https://github.com/BlurtHeart/algorithms/blob/master/sort/sort.go#L13) 
+
+
+## 插入排序之直接插入排序
+
+### 基本思想
+
+将一个记录插入到已排序好的有序表中，从而得到一个新，记录数增1的有序表。即：先将序列的第1个记录看成是一个有序的子序列，然后从第2个记录逐个进行插入，直至整个序列有序为止。
+
+**要点**：设立哨兵，作为临时存储和判断数组边界之用。
+
+### 示例
+
+1. 初始状态：2, 3, 2, 5, 1 哨兵:2
+2. 第一次插入：2, 2, 3, 5, 1 哨兵:2
+3. 第二次插入：1, 2, 2, 3, 5 哨兵:1
+4. 排序完成
+
+### 时间复杂度
+
+    n * (n-1) / 2 = O(n2)
+
+### 代码
+[传送门](https://github.com/BlurtHeart/algorithms/blob/master/sort/sort.go#L38) 
