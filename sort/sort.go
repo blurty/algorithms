@@ -52,3 +52,30 @@ func InsertSort(data []int) {
 		}
 	}
 }
+
+// shell insert sort
+// similar to InsertSort, two functions can be combined
+func shellInsertSort(data []int, n, dk int) {
+	for i:=dk; i<n; i++ {
+		if data[i] < data[i-dk] {
+			j := i - dk
+			x := data[i]
+			data[i] = data[i-dk]
+			for j >= 0 && x < data[j] {
+				data[j+dk] = data[j]
+				j -= dk
+			}
+			data[j+dk] = x
+		}
+	}
+}
+
+// shell sort
+func ShellSort(data []int) {
+	length := len(data)
+	dk := length / 2
+	for dk >= 1 {
+		shellInsertSort(data, length, dk)
+		dk /= 2
+	}
+}
