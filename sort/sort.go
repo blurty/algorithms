@@ -79,3 +79,47 @@ func ShellSort(data []int) {
 		dk /= 2
 	}
 }
+
+// select sort
+func SelectSort(nums []int) {
+	for i:=0; i<len(nums); i++ {
+		key := i + findMinKeyIndex(nums[i:])
+		if key != i {
+			nums[i], nums[key] = nums[key], nums[i]
+		}
+	}
+}
+
+// find the index of min key
+func findMinKeyIndex(nums []int) int {
+	index := 0
+	for i:=1; i<len(nums); i++ {
+		if nums[i] < nums[index] {
+			index = i
+		}
+	}
+	return index
+}
+
+// an improvement to select sort
+func DoubleSelectSort(nums []int) {
+	length := len(nums)
+	for i:=1; i<=length/2; i++ {
+		min, max := i-1, i-1
+		for j:=i; j<=length-i; j++ {
+			if nums[j] > nums[max] {
+				max = j
+				continue
+			}
+			if nums[j] < nums[min] {
+				min = j
+			}
+		}
+		nums[i-1], nums[min] = nums[min], nums[i-1]
+		// avoid collision between max exchange and min exchange
+		if max == i - 1 { 
+			max = min 
+		}
+		nums[length-i], nums[max] = nums[max], nums[length-i]
+	}
+}
