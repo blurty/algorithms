@@ -3,10 +3,33 @@
 ### contents
 
 - [Common Algorithms](#common-algorithms)
+    - [Sort](#sort)
+    - [Search](#search)
     - [String Handle](#string-handle)
     - [Array Handle](#array-handle)
     - [LinkList Handle](#linklist-handle)
 
+## Sort
+
+*排序算法*
+
+- 冒泡排序
+- 快速排序
+- 选择排序
+- 堆排序
+- 插入排序
+- 希尔排序
+- 。。。
+
+[详细信息](https://github.com/BlurtHeart/algorithms/tree/master/sort)
+
+## Search
+
+*查找算法*
+
+- 折半查找
+
+[详细信息](https://github.com/BlurtHeart/algorithms/tree/master/search)
 
 ## String Hanndle
 
