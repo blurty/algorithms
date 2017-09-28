@@ -76,10 +76,23 @@ func TestSelectSort(t *testing.T) {
 func TestDoubleSelectSort(t *testing.T) {
 	tests := []sortTester{
 		sortTester{[]int{49, 38, 65, 97, 76, 13, 27, 49, 55, 4}, []int{4, 13, 27, 38, 49, 49, 55, 65, 76, 97}},
-		sortTester{[]int{2, 38, 65, 97, 76, 13, 27, 49, 55, 4}, []int{2, 4, 13, 27, 38, 49, 55, 65, 76, 97}},		
+		sortTester{[]int{2, 38, 65, 97, 76, 13, 27, 49, 55, 4}, []int{2, 4, 13, 27, 38, 49, 55, 65, 76, 97}},
 	}
 	for _, v := range tests {
 		DoubleSelectSort(v.input)
+		if !reflect.DeepEqual(v.input, v.output) {
+			t.Errorf("want:%v, got:%v", v.output, v.input)
+		}
+	}
+}
+
+func TestHeapSort(t *testing.T) {
+	tests := []sortTester{
+		sortTester{[]int{49, 38, 65, 97, 76, 13, 27, 49, 55, 4}, []int{4, 13, 27, 38, 49, 49, 55, 65, 76, 97}},
+		sortTester{[]int{2, 38, 65, 97, 76, 13, 27, 49, 55, 4}, []int{2, 4, 13, 27, 38, 49, 55, 65, 76, 97}},
+	}
+	for _, v := range tests {
+		HeapSort(v.input)
 		if !reflect.DeepEqual(v.input, v.output) {
 			t.Errorf("want:%v, got:%v", v.output, v.input)
 		}

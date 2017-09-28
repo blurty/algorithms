@@ -228,3 +228,7 @@ b) 小顶堆序列：（12，36，24，85，47，30，53，91）
 ### 时间复杂度
 
     O(nlogn)
+
+### 代码
+
+[传送门](https://github.com/BlurtHeart/algorithms/blob/master/sort/sort.go#L128)
