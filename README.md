@@ -8,6 +8,7 @@
     - [String Handle](#string-handle)
     - [Array Handle](#array-handle)
     - [LinkList Handle](#linklist-handle)
+    - [Sudoku](#sudoku)
 
 ## Sort
 
@@ -52,3 +53,9 @@
 *对链表进行处理的算法*
 
 * [LinkList](https://github.com/BlurtHeart/algorithms/tree/master/linklist) - 对链表进行一些基础操作的算法
+
+## Sudoku
+
+*数独游戏*
+
+* [sudoku](https://github.com/BlurtHeart/algorithms/tree/master/sudoku)
