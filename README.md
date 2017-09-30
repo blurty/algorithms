@@ -20,6 +20,7 @@
 - 堆排序
 - 插入排序
 - 希尔排序
+- 归并排序
 - 。。。
 
 [详细信息](https://github.com/BlurtHeart/algorithms/tree/master/sort)

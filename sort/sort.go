@@ -157,3 +157,50 @@ func adjustHeap(nums []int, s, length int) {
 		}
 	}
 }
+
+// merge sort
+func MergeSort(nums []int) {
+	length := len(nums)
+	ret := make([]int, length)
+	privot := 1
+	for privot < length {
+		s := privot
+		privot *= 2
+		i := 0
+		for i+privot < length {
+			merge(nums, ret, i, i+s-1, i+privot-1)
+			i += privot
+		}
+		if i+s < length {
+			merge(nums, ret, i, i+s-1, length-1)
+		}
+		// exchange nums and ret to assure nums always merge to ret
+		nums, ret = ret, nums
+	}
+}
+
+// merge r[i...m] and r[m+1...n] to rf[i...n]
+func merge(r, rf []int, i, m, n int) {
+	j, k := m+1, i
+	for ; i <= m && j <= n; k++ {
+		if r[j] < r[i] {
+			rf[k] = r[j]
+			j++
+		} else {
+			rf[k] = r[i]
+			i++
+		}
+	}
+	for ; i <= m; i++ {
+		rf[k] = r[i]
+		k++
+	}
+	for ; j <= n; j++ {
+		rf[k] = r[j]
+		k++
+	}
+}
+
+// the recursive approach of merge sort
+func MergeSortRecursive(nums []int) {
+}
