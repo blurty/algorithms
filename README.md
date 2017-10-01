@@ -48,6 +48,8 @@
 * [Median of Arrays](https://github.com/BlurtHeart/algorithms/tree/master/median-of-arrays#same-size-arrays) - 计算两个数组的中位数
 * [Sum of Integers](https://github.com/BlurtHeart/algorithms/tree/master/sum_integer_to_target) - 多个整数相加等于或接近目标值
 * [Permutation and Combination](https://github.com/BlurtHeart/algorithms/tree/master/permutation_combination) - 多个数组之间的排列组合
+* [Remove Duplicate Data](https://github.com/BlurtHeart/algorithms/tree/master/array) - 对有序数组去重
+* [Find First Missing Positive Integer](https://github.com/BlurtHeart/algorithms/tree/master/array) - 查找数组中第一个缺少的正整数
 
 ## LinkList Handle
 

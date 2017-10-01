@@ -200,7 +200,3 @@ func merge(r, rf []int, i, m, n int) {
 		k++
 	}
 }
-
-// the recursive approach of merge sort
-func MergeSortRecursive(nums []int) {
-}
