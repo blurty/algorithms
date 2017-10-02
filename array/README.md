@@ -36,7 +36,7 @@ i = 3时，元素等于2，flag=1，此时它与位于i-1-flag=1处的元素2相
 
 于是，我们返回的数组长度就是原数组长度4减去去重的个数2 = 2.
 
-[查看代码](https://github.com/BlurtHeart/algorithms/tree/master/array#duplicate)
+[查看代码](https://github.com/BlurtHeart/algorithms/tree/master/array/duplicate.go)
 
 **为什么要拿每个元素跟i-1-flag处的元素作比较呢？**
 
@@ -58,4 +58,4 @@ i = 3时，元素等于2，flag=1，此时它与位于i-1-flag=1处的元素2相
 
 ### 查看代码
 
-[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array#find)
+[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/find.go)
