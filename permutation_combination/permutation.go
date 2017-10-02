@@ -41,3 +41,56 @@ func NextPermutation(nums []int) {
 		sort.Ints(nums)
 	}
 }
+
+// return all possible permutations of nums
+func Permute(nums []int) [][]int {
+	ret := [][]int{}
+
+	if len(nums) == 1 {
+		ret = append(ret, nums)
+	} else {
+		for i := 0; i < len(nums); i++ {
+			rem := append([]int{}, nums...)
+			// pick 1 element (i)
+			// and get permutations for the rest
+			rem = append(rem[:i], rem[i+1:]...)
+			arr := Permute(rem)
+			// prepend element (i)
+			for j := 0; j < len(arr); j++ {
+				//arr[j] = append(nums[i:i+1], arr[j]...)
+				k := append([]int{nums[i]}, arr[j]...)
+				ret = append(ret, k)
+			}
+		}
+	}
+	return ret
+}
+
+// nums is a sorted int slice
+// return all possible unique permutations of nums
+// just similar to Permute
+func PermuteUnique(nums []int) [][]int {
+	ret := [][]int{}
+
+	if len(nums) == 1 {
+		ret = append(ret, nums)
+	} else {
+		for i := 0; i < len(nums); i++ {
+			if i > 0 && nums[i] == nums[i-1] {
+				continue
+			}
+			rem := append([]int{}, nums...)
+			// pick 1 element (i)
+			// and get permutations for the rest
+			rem = append(rem[:i], rem[i+1:]...)
+			arr := PermuteUnique(rem)
+			// prepend element (i)
+			for j := 0; j < len(arr); j++ {
+				//arr[j] = append(nums[i:i+1], arr[j]...)
+				k := append([]int{nums[i]}, arr[j]...)
+				ret = append(ret, k)
+			}
+		}
+	}
+	return ret
+}
