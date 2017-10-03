@@ -58,4 +58,23 @@ i = 3时，元素等于2，flag=1，此时它与位于i-1-flag=1处的元素2相
 
 ### 查看代码
 
-[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/find.go)
+[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/find.go#4)
+
+## 从数组首元素跳到尾元素
+
+> Given an array of non-negative integers, you are initially positioned at the first index of the array.
+  Each element in the array represents your maximum jump length at that position.
+  Your goal is to reach the last index in the minimum number of jumps.
+  For example:
+  Given array A = [2,3,1,1,4]
+  The minimum number of jumps to reach the last index is 2. (Jump 1 step from index 0 to 1, then 3 steps to the last index.)
+  *Note:*
+  You can assume that you can always reach the last index.
+
+### 时间复杂度
+
+    O(n)
+
+### 查看代码
+
+[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/find.go#24)
