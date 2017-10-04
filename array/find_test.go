@@ -37,3 +37,22 @@ func TestJump(t *testing.T) {
 		}
 	}
 }
+
+func TestCanJump(t *testing.T) {
+	type tester struct {
+		input  []int
+		result bool
+	}
+	tests := []tester{
+		tester{[]int{0}, true},
+		tester{[]int{2, 3, 1, 1, 4}, true},
+		tester{[]int{3, 2, 1, 0, 4}, false},
+		tester{[]int{0, 0}, false},
+	}
+	for _, v := range tests {
+		got := CanJump(v.input)
+		if got != v.result {
+			t.Errorf("want:%d, got:%d", v.result, got)
+		}
+	}
+}

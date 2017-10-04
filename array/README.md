@@ -78,3 +78,20 @@ i = 3时，元素等于2，flag=1，此时它与位于i-1-flag=1处的元素2相
 ### 查看代码
 
 [传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/find.go#24)
+
+## 判断数组是否可达
+
+> Given an array of non-negative integers, you are initially positioned at the first index of the array.
+  Each element in the array represents your maximum jump length at that position.
+  Determine if you are able to reach the last index.
+  For example:
+  A = [2,3,1,1,4], return true.
+  A = [3,2,1,0,4], return false.
+
+### 时间复杂度
+
+    O(n)
+
+### 查看代码
+
+[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/find.go#41)

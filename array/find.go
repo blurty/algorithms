@@ -36,3 +36,20 @@ func Jump(nums []int) int {
 	}
 	return ret
 }
+
+// Determine if it's able to reach the last index from the first index.
+func CanJump(nums []int) bool {
+	n := len(nums)
+	if n < 2 {
+		return true
+	}
+
+	index, minIndex := n-1, n-1
+	for index >= 0 {
+		if nums[index]+index >= minIndex {
+			minIndex = index
+		}
+		index--
+	}
+	return minIndex == 0
+}
