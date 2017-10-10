@@ -9,6 +9,7 @@
     - [Array Handle](#array-handle)
     - [LinkList Handle](#linklist-handle)
     - [Sudoku](#sudoku)
+    - [Matrix](#matrix)
 
 ## Sort
 
@@ -62,3 +63,10 @@
 *数独游戏*
 
 * [sudoku](https://github.com/BlurtHeart/algorithms/tree/master/sudoku)
+
+## Matrix
+
+*矩阵*
+
+* [rotate](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#10)
+* [anti-rotate](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#28)
