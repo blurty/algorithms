@@ -37,3 +37,22 @@ func TestConcatStrings(t *testing.T) {
 		t.Fatalf("want:%v, got:%v", want, got)
 	}
 }
+
+func TestMultiply(t *testing.T) {
+	type tester struct {
+		x, y, z string
+	}
+	tests := []tester{
+		tester{"123", "456", "56088"},
+		tester{"0", "0", "0"},
+		tester{"999", "999", "998001"},
+		tester{"52", "60", "3120"},
+		tester{"9133", "0", "0"},
+	}
+	for _, v := range tests {
+		got := Multiply(v.x, v.y)
+		if got != v.z {
+			t.Fatalf("want:%s, got:%s", v.z, got)
+		}
+	}
+}
