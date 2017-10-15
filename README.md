@@ -51,6 +51,7 @@
 * [Permutation and Combination](https://github.com/BlurtHeart/algorithms/tree/master/permutation_combination) - 多个数组之间的排列组合
 * [Remove Duplicate Data](https://github.com/BlurtHeart/algorithms/tree/master/array) - 对有序数组去重
 * [Find First Missing Positive Integer](https://github.com/BlurtHeart/algorithms/tree/master/array) - 查找数组中第一个缺少的正整数
+* [Group Anagrams](https://github.com/BlurtHeart/algorithms/tree/master/array/README.md#L97) - 对字符串分组
 
 ## LinkList Handle
 
@@ -68,5 +69,5 @@
 
 *矩阵*
 
-* [rotate](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#10)
-* [anti-rotate](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#28)
+* [rotate](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L10)
+* [anti-rotate](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L28)

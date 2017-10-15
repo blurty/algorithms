@@ -58,7 +58,7 @@ i = 3时，元素等于2，flag=1，此时它与位于i-1-flag=1处的元素2相
 
 ### 查看代码
 
-[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/find.go#4)
+[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/find.go#L4)
 
 ## 从数组首元素跳到尾元素
 
@@ -77,7 +77,7 @@ i = 3时，元素等于2，flag=1，此时它与位于i-1-flag=1处的元素2相
 
 ### 查看代码
 
-[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/find.go#24)
+[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/find.go#L24)
 
 ## 判断数组是否可达
 
@@ -94,4 +94,22 @@ i = 3时，元素等于2，flag=1，此时它与位于i-1-flag=1处的元素2相
 
 ### 查看代码
 
-[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/find.go#41)
+[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/find.go#L41)
+
+## 字符串分组
+
+### 输入
+
+    ["eat", "tea", "tan", "ate", "nat", "bat"]
+
+### 输出
+
+    [
+      ["ate", "eat","tea"],
+      ["nat","tan"],
+      ["bat"]
+    ]
+
+### 查看代码
+
+[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/string_array.go#L9)
