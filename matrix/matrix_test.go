@@ -58,3 +58,32 @@ func TestAntiRotate(t *testing.T) {
 		}
 	}
 }
+
+func TestSpiralOrder(t *testing.T) {
+	type tester struct {
+		input  [][]int
+		output []int
+	}
+	tests := []tester{
+		tester{
+			input: [][]int{
+				[]int{1, 2, 3},
+				[]int{4, 5, 6},
+				[]int{7, 8, 9},
+			},
+			output: []int{1, 2, 3, 6, 9, 8, 7, 4, 5},
+		},
+		tester{
+			input: [][]int{
+				[]int{1, 2, 3},
+			},
+			output: []int{1, 2, 3},
+		},
+	}
+	for _, v := range tests {
+		got := SpiralOrder(v.input)
+		if !reflect.DeepEqual(v.output, got) {
+			t.Errorf("want:%v, got:%v", v.output, got)
+		}
+	}
+}
