@@ -79,6 +79,14 @@ func TestSpiralOrder(t *testing.T) {
 			},
 			output: []int{1, 2, 3},
 		},
+		tester{
+			input: [][]int{
+				[]int{1},
+				[]int{2},
+				[]int{3},
+			},
+			output: []int{1, 2, 3},
+		},
 	}
 	for _, v := range tests {
 		got := SpiralOrder(v.input)

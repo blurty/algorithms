@@ -37,7 +37,7 @@ the rotation.
 
 ### 算法以及代码
 
-[算法查看注释](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#10)
+[算法查看注释](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L10)
 
 
 ## 逆时针旋转矩阵90度
@@ -70,7 +70,7 @@ the rotation.
 
 ### 算法以及代码
 
-[算法查看注释](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#28)
+[算法查看注释](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L28)
 
 ## 矩阵以螺旋序排列
 
@@ -101,4 +101,4 @@ Given a matrix of m x n elements (m rows, n columns), return all elements of the
  when traverse left or up it has to check whether the row or col still exists to
  prevent duplicates.
 
-[查看算法](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#40)
+[查看算法](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L40)

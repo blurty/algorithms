@@ -63,11 +63,12 @@
 
 *数独游戏*
 
-* [sudoku](https://github.com/BlurtHeart/algorithms/tree/master/sudoku)
+* [sudoku](https://github.com/BlurtHeart/algorithms/tree/master/sudoku) - 数独解法
 
 ## Matrix
 
 *矩阵*
 
-* [rotate](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L10)
-* [anti-rotate](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L28)
+* [Rotate](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L10) - 矩阵顺时针旋转
+* [Anti-Rotate](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L28) - 矩阵逆时针旋转
+* [Spiral Order](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L40) - 矩阵螺旋序排列
