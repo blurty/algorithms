@@ -51,7 +51,8 @@
 * [Permutation and Combination](https://github.com/BlurtHeart/algorithms/tree/master/permutation_combination) - 多个数组之间的排列组合
 * [Remove Duplicate Data](https://github.com/BlurtHeart/algorithms/tree/master/array) - 对有序数组去重
 * [Find First Missing Positive Integer](https://github.com/BlurtHeart/algorithms/tree/master/array) - 查找数组中第一个缺少的正整数
-* [Group Anagrams](https://github.com/BlurtHeart/algorithms/tree/master/array/README.md#L97) - 对字符串分组
+* [Group Anagrams](https://github.com/BlurtHeart/algorithms/tree/master/array) - 对字符串分组
+* [Maximum Subarray](https://github.com/BlurtHeart/algorithms/tree/master/array) - int数组子集的最大值
 
 ## LinkList Handle
 
