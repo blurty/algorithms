@@ -53,6 +53,8 @@
 * [Find First Missing Positive Integer](https://github.com/BlurtHeart/algorithms/tree/master/array) - 查找数组中第一个缺少的正整数
 * [Group Anagrams](https://github.com/BlurtHeart/algorithms/tree/master/array) - 对字符串分组
 * [Maximum Subarray](https://github.com/BlurtHeart/algorithms/tree/master/array) - int数组子集的最大值
+* [Merge Interval](https://github.com/BlurtHeart/algorithms/tree/master/array) - 合并区间
+* [Insert Interval](https://github.com/BlurtHeart/algorithms/tree/master/array) - 插入新区间
 
 ## LinkList Handle
 

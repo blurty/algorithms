@@ -9,6 +9,8 @@
     - [判断数组是否可达](#判断数组是否可达)
     - [字符串分组](#字符串分组)
     - [int数组子集的最大值](#int数组子集的最大值)
+    - [合并区间](#合并区间)
+    - [插入新区间](#插入新区间)
 
 ## 对有序数组去重
 
@@ -138,4 +140,54 @@ i = 3时，元素等于2，flag=1，此时它与位于i-1-flag=1处的元素2相
 
 ### 查看代码
 
-[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/int_array.go#L4)
+[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/int_array.go#L8)
+
+## 合并区间
+
+将包含区间[start, end]的Slice合并／去重。
+
+有区间struct如下：
+
+    type Interval struct {
+    	    Start int
+    	    End   int
+    }
+
+有一组区间包含在一个slice:[]Interval中，slice是未去重的。例如Interval{1, 5}和Interval{3, 7}可以合并为Interval{1, 7}。
+
+### 算法
+
+1. 将slice按Interval.Start排序
+2. 将Slice中每个区间与上一个区间去重
+
+### 时间复杂度
+
+快速排序的时间复杂度为O(nlogn)，遍历区间的复杂度为O(n)，所以时间复杂度为O(nlogn)。
+
+### 查看代码
+
+[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/int_array.go#L34)
+
+## 插入新区间
+
+插入新的区间[start, end]到区间Slice中。
+
+有区间struct如下：
+
+    type Interval struct {
+    	    Start int
+    	    End   int
+    }
+
+### 算法
+
+两个区间a和b的有交集有以下四种情况：
+
+1. a.Start <= b.Start <= a.End <= b.End  ->  [a.Start, b.End]
+2. a.Start <= b.Start <= b.End <= a.End  ->  [a.Start, a.End]
+3. b.Start <= a.Start <= a.End <= b.End  ->  [b.Start, b.End]
+4. b.Start <= a.Start <= b.End <= a.End  ->  [b.Start, a.End]
+
+### 查看代码
+
+[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/int_array.go#L57)
