@@ -75,3 +75,4 @@
 * [Rotate](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L10) - 矩阵顺时针旋转
 * [Anti-Rotate](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L28) - 矩阵逆时针旋转
 * [Spiral Order](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L40) - 矩阵螺旋序排列
+* [Generate Spiral Matrix](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L80) - 以螺旋序生成矩阵

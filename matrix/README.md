@@ -6,6 +6,7 @@
     - [顺时针旋转矩阵90度](#顺时针旋转矩阵90度)
     - [逆时针旋转矩阵90度](#逆时针旋转矩阵90度)
     - [矩阵以螺旋序排列](#矩阵以螺旋序排列)
+    - [以螺旋序生成矩阵](#以螺旋序生成矩阵)
 
 ## 顺时针旋转矩阵90度
 
@@ -102,3 +103,38 @@ Given a matrix of m x n elements (m rows, n columns), return all elements of the
  prevent duplicates.
 
 [查看算法](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L40)
+
+## 以螺旋序生成矩阵
+
+给一个数字n，返回一个n x n的矩阵，矩阵以螺旋序生成。
+
+## 举例
+
+**输入：**
+
+    3
+
+**输出：**
+
+    [
+        [ 1, 2, 3 ],
+        [ 8, 9, 4 ],
+        [ 7, 6, 5 ]
+    ]
+
+### 算法以及代码
+
+本题与[矩阵以螺旋序排列](#矩阵以螺旋序排列)有异曲同工之妙。所以解法思路也一样。
+
+从1到n*n依次找到在矩阵中对应的下标。很容易看出来矩阵下标的增长共有4个方向，我们以[rowInc, colInc]
+分别来表示一维和二维下标的增量。可知四个取值分别为：
+
+    [0, 1], [1, 0], [0, -1], [-1, 0]
+
+我们以rowBegin, rowEnd, colBegin, colEnd分别来表示下标增长的四个边界。每次下标越过边界时，需要重置
+边界值和下标值。分析可得如下四种情况：
+
+1. row > rowEnd，此时向右增长到边界，需要向下增长，同时重置下标值。colEnd--;row, col = rowEnd, colEnd; rowInc, colInc = 0, -1。
+2. 同上分析，分别可得出其他三种情况的取值。具体见代码。
+
+[查看算法](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L80)

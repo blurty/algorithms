@@ -95,3 +95,26 @@ func TestSpiralOrder(t *testing.T) {
 		}
 	}
 }
+
+func TestGenerateSpiralMatrix(t *testing.T) {
+	type tester struct {
+		input  int
+		output [][]int
+	}
+	tests := []tester{
+		tester{
+			input: 3,
+			output: [][]int{
+				[]int{1, 2, 3},
+				[]int{8, 9, 4},
+				[]int{7, 6, 5},
+			},
+		},
+	}
+	for _, v := range tests {
+		got := GenerateSpiralMatrix(v.input)
+		if !reflect.DeepEqual(v.output, got) {
+			t.Errorf("want:%v, got:%v", v.output, got)
+		}
+	}
+}
