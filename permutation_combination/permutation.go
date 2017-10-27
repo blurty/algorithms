@@ -2,6 +2,7 @@ package permutation
 
 import (
 	"sort"
+	"strconv"
 )
 
 // Implement next permutation, which rearranges numbers into
@@ -93,4 +94,70 @@ func PermuteUnique(nums []int) [][]int {
 		}
 	}
 	return ret
+}
+
+// calculate the factorial of n
+func factorial(n int) int {
+	if n < 1 {
+		return 0
+	} else if n == 1 {
+		return n
+	}
+	return n * factorial(n-1)
+}
+
+// find the kth permutation sequence produced by nums recursively
+// n is the number of nums
+func restString(nums []string, n, k int) string {
+	var ret string
+	if n < 2 {
+		return nums[0]
+	}
+	divider := factorial(n - 1)
+	quotient, remainder := k/divider, k%divider
+	index := quotient
+	if remainder == 0 {
+		index--
+	}
+	ret += nums[index]
+	rem := append([]string{}, nums...)
+	rem = append(rem[:index], rem[index+1:]...)
+	ret += restString(rem, n-1, k-index*divider)
+
+	return ret
+}
+
+// n represent the base of producing permutations
+// k represent the index of permutations
+// return the kth permutation sequence.
+func GetPermutation(n int, k int) string {
+	/*
+		if n == 0 {
+			return ""
+		}
+		data := make([]int, n)
+		data[0] = 1
+		iToS := []byte("123456789")
+		for i := 1; i < n; i++ {
+			data[i] = data[i-1] * i
+		}
+		ret := ""
+		k--
+		for i := n - 1; i >= 0; i-- {
+			ret += string(iToS[k/data[i]])
+			iToS = append(iToS[:k/data[i]], iToS[k/data[i]+1:]...)
+			k = k % data[i]
+		}
+		return ret
+	*/
+	var ret string
+	if k > factorial(n) || k < 1 || n > 9 {
+		return ret
+	}
+
+	nums := make([]string, n)
+	for i := 0; i < n; i++ {
+		nums[i] = strconv.Itoa(i + 1)
+	}
+	return restString(nums, n, k)
 }

@@ -10,6 +10,7 @@
     - [LinkList Handle](#linklist-handle)
     - [Sudoku](#sudoku)
     - [Matrix](#matrix)
+    - [Permtation And Combination](#permutation-and-combination)
 
 ## Sort
 
@@ -76,3 +77,12 @@
 * [Anti-Rotate](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L28) - 矩阵逆时针旋转
 * [Spiral Order](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L40) - 矩阵螺旋序排列
 * [Generate Spiral Matrix](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L80) - 以螺旋序生成矩阵
+
+## Permtation And Combination
+
+*排列组合*
+
+* [Parentheses](https://github.com/BlurtHeart/algorithms/tree/master/permutation_combination) - 括弧问题
+* [一串数字的排列组合](https://github.com/BlurtHeart/algorithms/tree/master/permutation_combination) - 一串数字的排列组合
+* [一串数字的排列组合去重后的结果](https://github.com/BlurtHeart/algorithms/tree/master/permutation_combination) - 一串数字的排列组合去重后的结果
+* [计算第k个组合](https://github.com/BlurtHeart/algorithms/tree/master/permutation_combination) - 计算第k个组合

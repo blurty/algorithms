@@ -102,3 +102,34 @@ func TestPermuteUnique(t *testing.T) {
 		}
 	}
 }
+
+func TestGetPermutation(t *testing.T) {
+	type tester struct {
+		input  int
+		index  int
+		output string
+	}
+	tests := []tester{
+		tester{
+			input:  3,
+			index:  5,
+			output: "312",
+		},
+		tester{
+			input:  4,
+			index:  13,
+			output: "3124",
+		},
+		tester{
+			input:  3,
+			index:  2,
+			output: "132",
+		},
+	}
+	for _, v := range tests {
+		got := GetPermutation(v.input, v.index)
+		if got != v.output {
+			t.Errorf("want:%s, got:%s", v.output, got)
+		}
+	}
+}
