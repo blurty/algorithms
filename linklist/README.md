@@ -1,10 +1,14 @@
-## LinkList - 链表
+# 链表
 
-### contents
+### 目录
 
-- [合并链表](merge)
+- [链表](#链表)
+    - [合并链表](#合并链表)
+    - [交换结点](#交换结点)
+    - [按K反转结点](#按K反转结点)
+    - [轮换结点](#轮换结点)
 
-## Merge
+## 合并链表
 
 ### merge two sorted lists
 > Merge two sorted linked lists and return it as a new list.
@@ -33,7 +37,7 @@ Analyze and describe its complexity.
 
 [查看代码](https://github.com/BlurtHeart/algorithms/blob/master/linklist/merge.go#L46)
 
-## Swap
+## 交换结点
 
 ### Swap Nodes in Pairs
 > Given a linked list, swap every two adjacent nodes and return its head.
@@ -43,7 +47,7 @@ Analyze and describe its complexity.
 
 [查看代码](https://github.com/BlurtHeart/algorithms/blob/master/linklist/merge.go#L75)
 
-### Reverse Nodes in k-Group
+## 按K反转结点
 > Given a linked list, reverse the nodes of a linked list k at a time and return its modified list.
   k is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of k then left-out nodes in the end should remain as it is.
   You may not alter the values in the nodes, only nodes itself may be changed.
@@ -54,3 +58,11 @@ Analyze and describe its complexity.
   For k = 3, you should return: 3->2->1->4->5
 
 [查看代码](https://github.com/BlurtHeart/algorithms/blob/master/linklist/merge.go#L90)
+
+## 轮换结点
+> Given a list, rotate the list to the right by k places, where k is non-negative.
+  For example:
+  Given 1->2->3->4->5->NULL and k = 2,
+  return 4->5->1->2->3->NULL.
+
+[查看代码](https://github.com/BlurtHeart/algorithms/blob/master/linklist/merge.go#L113)

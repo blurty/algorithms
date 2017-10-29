@@ -146,3 +146,43 @@ func TestReverseKGroup(t *testing.T) {
 		t.Fatalf("no fifth node, got:%d", b.Next.Next.Next.Next.Next.Val)
 	}
 }
+
+func TestRotateRight(t *testing.T) {
+	a := &ListNode{Val: 1}
+	a1 := &ListNode{Val: 2}
+	a2 := &ListNode{Val: 3}
+	a3 := &ListNode{Val: 4}
+	a4 := &ListNode{Val: 5}
+	a3.Next = a4
+	a2.Next = a3
+	a1.Next = a2
+	a.Next = a1
+
+	b := RotateRight(a, 2) // 4, 5, 1, 2, 3
+	if b.Val != 4 {
+		t.Fatalf("first node, want:4, got:%d", b.Val)
+	}
+	if b.Next == nil {
+		t.Fatalf("second node, want:5, got:nil")
+	} else if b.Next.Val != 5 {
+		t.Fatalf("second node, want:5, got:%d", b.Next.Val)
+	}
+	if b.Next.Next == nil {
+		t.Fatalf("third node, want:1, got:nil")
+	} else if b.Next.Next.Val != 1 {
+		t.Fatalf("third node, want:1, got:%d", b.Next.Next.Val)
+	}
+	if b.Next.Next.Next == nil {
+		t.Fatalf("forth node, want:2, got:nil")
+	} else if b.Next.Next.Next.Val != 2 {
+		t.Fatalf("third node, want:2, got:%d", b.Next.Next.Next.Val)
+	}
+	if b.Next.Next.Next.Next == nil {
+		t.Fatalf("forth node, want:3, got:nil")
+	} else if b.Next.Next.Next.Next.Val != 3 {
+		t.Fatalf("third node, want:3, got:%d", b.Next.Next.Next.Next.Val)
+	}
+	if b.Next.Next.Next.Next.Next != nil {
+		t.Fatalf("no fifth node, got:%d", b.Next.Next.Next.Next.Next.Val)
+	}
+}
