@@ -111,6 +111,9 @@ func ReverseKGroup(head *ListNode, k int) *ListNode {
 
 // rotate the list to the right by k places, where k is non-negative.
 func RotateRight(head *ListNode, k int) *ListNode {
+	if head == nil {
+		return head
+	}
 	ptr := head
 	// number of nodes
 	listLen := 1
