@@ -11,6 +11,7 @@
     - [Sudoku](#sudoku)
     - [Matrix](#matrix)
     - [Permtation And Combination](#permutation-and-combination)
+    - [Maze](#maze)
 
 ## Sort
 
@@ -86,3 +87,10 @@
 * [一串数字的排列组合](https://github.com/BlurtHeart/algorithms/tree/master/permutation_combination) - 一串数字的排列组合
 * [一串数字的排列组合去重后的结果](https://github.com/BlurtHeart/algorithms/tree/master/permutation_combination) - 一串数字的排列组合去重后的结果
 * [计算第k个组合](https://github.com/BlurtHeart/algorithms/tree/master/permutation_combination) - 计算第k个组合
+
+## Maze
+
+*路径问题*
+
+* [在矩阵中寻找路径总数](https://github.com/BlurtHeart/algorithms/tree/master/maze)
+* [在有障碍的矩阵中寻找路径总数](https://github.com/BlurtHeart/algorithms/tree/master/maze)
