@@ -51,3 +51,36 @@ func TestUniquePathsWithObstacles(t *testing.T) {
 		}
 	}
 }
+
+func TestMinPathSum(t *testing.T) {
+	type tester struct {
+		input  [][]int
+		output int
+	}
+	tests := []tester{
+		tester{
+			input: [][]int{
+				[]int{1},
+			},
+			output: 1,
+		},
+		tester{
+			input:  [][]int{},
+			output: 0,
+		},
+		tester{
+			input: [][]int{
+				[]int{1, 3, 1},
+				[]int{1, 5, 1},
+				[]int{4, 2, 1},
+			},
+			output: 7,
+		},
+	}
+	for _, v := range tests {
+		got := MinPathSum(v.input)
+		if got != v.output {
+			t.Errorf("want:%d, got:%d", v.output, got)
+		}
+	}
+}

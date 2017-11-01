@@ -53,3 +53,29 @@ func UniquePathsWithObstacles(obstacleGrid [][]int) int {
 	}
 	return vec[width-1]
 }
+
+// find a path from top left to bottom right which minimizes the sum of
+// all numbers along its path in a m x n grid filled with non-negative numbers.
+// return the sum
+func MinPathSum(grid [][]int) int {
+	if len(grid) == 0 || len(grid[0]) == 0 {
+		return 0
+	}
+	width := len(grid[0])
+	vec := make([]int, width)
+	vec[0] = grid[0][0]
+	for i := 1; i < width; i++ {
+		vec[i] = vec[i-1] + grid[0][i]
+	}
+	for i := 1; i < len(grid); i++ {
+		vec[0] += grid[i][0]
+		for j := 1; j < width; j++ {
+			if vec[j-1] < vec[j] {
+				vec[j] = vec[j-1] + grid[i][j]
+			} else {
+				vec[j] += grid[i][j]
+			}
+		}
+	}
+	return vec[width-1]
+}

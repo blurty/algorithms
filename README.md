@@ -94,3 +94,4 @@
 
 * [在矩阵中寻找路径总数](https://github.com/BlurtHeart/algorithms/tree/master/maze)
 * [在有障碍的矩阵中寻找路径总数](https://github.com/BlurtHeart/algorithms/tree/master/maze)
+* [计算最小路径总值](https://github.com/BlurtHeart/algorithms/tree/master/maze)
