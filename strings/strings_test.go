@@ -56,3 +56,19 @@ func TestMultiply(t *testing.T) {
 		}
 	}
 }
+
+func TestAddBinary(t *testing.T) {
+	type tester struct {
+		x, y, z string
+	}
+	tests := []tester{
+		tester{"11", "1", "100"},
+		tester{"110101", "0101", "111010"},
+	}
+	for _, v := range tests {
+		got := AddBinary(v.x, v.y)
+		if got != v.z {
+			t.Fatalf("want:%s, got:%s", v.z, got)
+		}
+	}
+}

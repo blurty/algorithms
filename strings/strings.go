@@ -77,3 +77,65 @@ func Multiply(num1 string, num2 string) string {
 	}
 	return "0"
 }
+
+// return sum of two binary digits represented as string
+// such as "11" + "1" = "100"
+func AddBinary(a string, b string) string {
+	lenA, lenB := len(a), len(b)
+	if lenA > lenB {
+		return AddBinary(b, a)
+	}
+	interval := lenB - lenA
+	var ret string
+	var carry bool
+	for i := lenA - 1; i >= 0; i-- {
+		if !carry {
+			if a[i] == '1' && b[i+interval] == '1' {
+				ret = "0" + ret
+				carry = true
+			} else if a[i] == '1' && b[i+interval] == '0' || (a[i] == '0' && b[i+interval] == '1') {
+				ret = "1" + ret
+				carry = false
+			} else if a[i] == '0' && b[i+interval] == '0' {
+				ret = "0" + ret
+				carry = false
+			} else {
+				panic("wrong input")
+			}
+		} else {
+			if a[i] == '1' && b[i+interval] == '1' {
+				ret = "1" + ret
+				carry = true
+			} else if a[i] == '1' && b[i+interval] == '0' || (a[i] == '0' && b[i+interval] == '1') {
+				ret = "0" + ret
+				carry = true
+			} else if a[i] == '0' && b[i+interval] == '0' {
+				ret = "1" + ret
+				carry = false
+			} else {
+				panic("wrong input")
+			}
+		}
+	}
+	for i := interval - 1; i >= 0; i-- {
+		if !carry {
+			ret = string([]rune(b)[0:i+1]) + ret
+			carry = false
+			break
+		} else {
+			if b[i] == '1' {
+				ret = "0" + ret
+				carry = true
+			} else if b[i] == '0' {
+				ret = "1" + ret
+				carry = false
+			} else {
+				panic("wrong input")
+			}
+		}
+	}
+	if carry {
+		ret = "1" + ret
+	}
+	return ret
+}
