@@ -24,3 +24,19 @@ func TestTrap(t *testing.T) {
 		}
 	}
 }
+
+func TestClimbStairs(t *testing.T) {
+	type tester struct {
+		input, output int
+	}
+	tests := []tester{
+		tester{2, 2},
+		tester{3, 3},
+	}
+	for _, v := range tests {
+		got := ClimbStairs(v.input)
+		if got != v.output {
+			t.Errorf("want:%v, got:%v", v.output, got)
+		}
+	}
+}

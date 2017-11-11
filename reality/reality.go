@@ -27,3 +27,27 @@ func Trap(height []int) int {
 	}
 	return ret
 }
+
+// Each time climb 1 or 2 steps.
+// given steps of stairs
+// return total distinct ways to climb to the top
+func ClimbStairs(n int) int {
+	// base cases
+	if n <= 0 {
+		return 0
+	}
+	if n == 1 {
+		return 1
+	}
+	if n == 2 {
+		return 2
+	}
+
+	oneStepBefore, twoStepsBefore := 2, 1
+	allWays := 0
+	for i := 2; i < n; i++ {
+		allWays = oneStepBefore + twoStepsBefore
+		twoStepsBefore, oneStepBefore = oneStepBefore, allWays
+	}
+	return allWays
+}

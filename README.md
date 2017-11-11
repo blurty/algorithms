@@ -12,6 +12,7 @@
     - [Matrix](#matrix)
     - [Permtation And Combination](#permutation-and-combination)
     - [Maze](#maze)
+    - [Reality](#reality)
 
 ## Sort
 
@@ -95,3 +96,10 @@
 * [在矩阵中寻找路径总数](https://github.com/BlurtHeart/algorithms/tree/master/maze)
 * [在有障碍的矩阵中寻找路径总数](https://github.com/BlurtHeart/algorithms/tree/master/maze)
 * [计算最小路径总值](https://github.com/BlurtHeart/algorithms/tree/master/maze)
+
+## Reality
+
+*现实问题*
+
+* [Trapping Rain Water](https://github.com/BlurtHeart/algorithms/tree/master/reality) - 蓄水问题
+* [Climbing Stairs](https://github.com/BlurtHeart/algorithms/tree/master/maze) - 爬楼梯问题

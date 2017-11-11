@@ -4,6 +4,7 @@
 
 - [现实问题](#现实问题)
     - [蓄水](#trapping-rain-water)
+    - [爬楼梯](#climbing-stairs)
 
 ## Trapping Rain Water
 
@@ -34,3 +35,51 @@ compute how much water it is able to trap after raining.
 ### 查看代码
 
 [传送门](https://github.com/BlurtHeart/algorithms/tree/master/reality/reality.go#L7)
+
+## Climbing Stairs
+
+*爬楼梯*
+
+### 问题描述
+
+假设你在爬楼梯，每次只能爬一个或两个台阶。问有多少种方式能爬n个台阶。
+
+### 示例
+
+示例一：
+
+    Input: 2
+    Output:  2
+    Explanation:  There are two ways to climb to the top.
+
+    1. 1 step + 1 step
+    2. 2 steps
+
+示例二：
+
+    Input: 3
+    Output:  3
+    Explanation:  There are three ways to climb to the top.
+
+    1. 1 step + 1 step + 1 step
+    2. 1 step + 2 steps
+    3. 2 steps + 1 step
+
+### 算法描述
+
+假设我们要爬n个台阶，以[n]表示爬n个台阶的方式总数，相应的，以[n-1]和[n-2]分别表示爬n-1和n-2个台阶的总数。
+分析一下，从n-1处到达n处，一次性爬一个台阶，而从n-2处到达n处，一次性爬两个台阶。所以，他们之间的关系是
+`[n] = [n-1] + [n-2]`。在这个过程中不会存在重复或者缺少的情况。因为我们在最后一步把他们区分开来了。
+
+现在让我们来分析一下整个算法的过程。
+
+1. 当n为0时，[n] = 0
+2. 当n为1时，我们只有一个方法，[n] = 1
+3. 当n为2时，我们可以通过一次性爬两个台阶或者一次一个台阶的方式，[n] = 2
+4. 当n大于2时，[n] = [n-1] + [n-2]
+
+通过以上分析可知，这就是一个起点不同的伪斐波那契数列。
+
+### 查看代码
+
+[传送门](https://github.com/BlurtHeart/algorithms/tree/master/reality/reality.go#L34)
