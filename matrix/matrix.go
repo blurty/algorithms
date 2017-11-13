@@ -115,3 +115,28 @@ func GenerateSpiralMatrix(n int) [][]int {
 	}
 	return ret
 }
+
+// search for a value in an m x n matrix
+// matrix has two properties:
+// Integers in each row are sorted from left to right.
+// The first integer of each row is greater than the last integer of the previous row.
+func SearchMatrix(matrix [][]int, target int) bool {
+	row := len(matrix)
+	if row == 0 {
+		return false
+	}
+	col := len(matrix[0])
+	if col == 0 {
+		return false
+	}
+	low, high := 0, row*col-1
+	for low != high {
+		mid := (low + high - 1) >> 1
+		if matrix[mid/col][mid%col] < target {
+			low = mid + 1
+		} else {
+			high = mid
+		}
+	}
+	return matrix[low/col][low%col] == target
+}

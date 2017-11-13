@@ -118,3 +118,30 @@ func TestGenerateSpiralMatrix(t *testing.T) {
 		}
 	}
 }
+
+func TestSearchMatrix(t *testing.T) {
+	type tester struct {
+		input  [][]int
+		target int
+		output bool
+	}
+	tests := []tester{
+		tester{
+			input: [][]int{
+				[]int{1, 3, 5, 7},
+				[]int{10, 11, 16, 20},
+				[]int{23, 30, 34, 50},
+			},
+			target: 3,
+			output: true,
+		},
+		tester{input: [][]int{[]int{}}, target: 1, output: false},
+		tester{input: [][]int{}, target: 1, output: false},
+	}
+	for _, v := range tests {
+		got := SearchMatrix(v.input, v.target)
+		if got != v.output {
+			t.Errorf("want:%v, got:%v", v.output, got)
+		}
+	}
+}

@@ -7,6 +7,7 @@
     - [逆时针旋转矩阵90度](#逆时针旋转矩阵90度)
     - [矩阵以螺旋序排列](#矩阵以螺旋序排列)
     - [以螺旋序生成矩阵](#以螺旋序生成矩阵)
+    - [查找有序矩阵中的元素](#查找有序矩阵中的元素)
 
 ## 顺时针旋转矩阵90度
 
@@ -108,7 +109,7 @@ Given a matrix of m x n elements (m rows, n columns), return all elements of the
 
 给一个数字n，返回一个n x n的矩阵，矩阵以螺旋序生成。
 
-## 举例
+### 举例
 
 **输入：**
 
@@ -138,3 +139,18 @@ Given a matrix of m x n elements (m rows, n columns), return all elements of the
 2. 同上分析，分别可得出其他三种情况的取值。具体见代码。
 
 [查看算法](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L80)
+
+## 查找有序矩阵中的元素
+
+在一个m * n的二维矩阵中查找一个元素是否存在。矩阵是有序的，有以下两个特性：
+
+1. 矩阵中的每一行都是从左到右有序的。
+2. 矩阵中的每一行的第一个元素都比上一行的最后一个元素大。
+
+### 分析
+
+我们可以把这个二维矩阵看作一个有序的数组。那么对于一个有序数组中查找一个元素再简单不过了，我们使用二分查找法。
+
+### 代码实现
+
+[传送门](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L123)
