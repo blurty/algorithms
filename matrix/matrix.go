@@ -140,3 +140,38 @@ func SearchMatrix(matrix [][]int, target int) bool {
 	}
 	return matrix[low/col][low%col] == target
 }
+
+// if an element in matrix is 0, set its entire row and column to 0
+// use constant space
+func SetZeroes(matrix [][]int) {
+	var rows, cols int
+	if rows = len(matrix); rows == 0 {
+		return
+	}
+	if cols = len(matrix[0]); cols == 0 {
+		return
+	}
+
+	col0 := 1
+	for i := 0; i < rows; i++ {
+		if matrix[i][0] == 0 {
+			col0 = 0
+		}
+		for j := 1; j < cols; j++ {
+			if matrix[i][j] == 0 {
+				matrix[i][0], matrix[0][j] = 0, 0
+			}
+		}
+	}
+
+	for i := rows - 1; i >= 0; i-- {
+		for j := cols - 1; j > 0; j-- {
+			if matrix[i][0] == 0 || matrix[0][j] == 0 {
+				matrix[i][j] = 0
+			}
+		}
+		if col0 == 0 {
+			matrix[i][0] = 0
+		}
+	}
+}
