@@ -8,6 +8,7 @@
     - [矩阵以螺旋序排列](#矩阵以螺旋序排列)
     - [以螺旋序生成矩阵](#以螺旋序生成矩阵)
     - [查找有序矩阵中的元素](#查找有序矩阵中的元素)
+    - [矩阵置零](#矩阵置零)
 
 ## 顺时针旋转矩阵90度
 
@@ -154,3 +155,108 @@ Given a matrix of m x n elements (m rows, n columns), return all elements of the
 ### 代码实现
 
 [传送门](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L123)
+
+## 矩阵置零
+
+一个m x n的矩阵，如果某个元素为0，则把该元素所在的整行和整列都置0。
+
+### O(mn) Space
+
+    func SetZeroes(matrix [][]int) {
+        var rows, cols int
+    	if rows = len(matrix); rows == 0 {
+    		return
+    	}
+    	if cols = len(matrix[0]); cols == 0 {
+    		return
+    	}
+
+        flagArr := make([][]bool, rows)
+	    for i := 0; i < rows; i++ {
+	    	flagArr[i] = make([]bool, cols)
+	    }
+	    for i := 0; i < rows; i++ {
+	    	for j := 0; j < cols; j++ {
+	    		if matrix[i][j] == 0 {
+	    			for m := 0; m < cols; m++ {
+	    				flagArr[i][m] = true
+	    			}
+	    			for n := 0; n < rows; n++ {
+	    				flagArr[n][j] = true
+	    			}
+	    		}
+	    	}
+	    }
+	    for i := 0; i < rows; i++ {
+	    	for j := 0; j < cols; j++ {
+	    		if flagArr[i][j] {
+	    			matrix[i][j] = 0
+	    		}
+	    	}
+	    }
+	}
+
+### O(m+n) Space
+
+    func SetZeroes(matrix [][]int) {
+    	var rows, cols int
+    	if rows = len(matrix); rows == 0 {
+    		return
+    	}
+    	if cols = len(matrix[0]); cols == 0 {
+    		return
+    	}
+
+    	flagRows := make([]bool, rows)
+    	flagCols := make([]bool, cols)
+    	for i := 0; i < rows; i++ {
+    		for j := 0; j < cols; j++ {
+    			if matrix[i][j] == 0 {
+    				flagRows[i] = true
+    				flagCols[j] = true
+    			}
+    		}
+    	}
+    	for i := 0; i < rows; i++ {
+    		for j := 0; j < cols; j++ {
+    			if flagRows[i] || flagCols[j] {
+    				matrix[i][j] = 0
+    			}
+    		}
+    	}
+    }
+
+### O(1)
+
+    func SetZeroes(matrix [][]int) {
+    	var rows, cols int
+    	if rows = len(matrix); rows == 0 {
+    		return
+    	}
+    	if cols = len(matrix[0]); cols == 0 {
+    		return
+    	}
+
+    	col0 := 1
+    	for i := 0; i < rows; i++ {
+    		if matrix[i][0] == 0 {
+    			col0 = 0
+    		}
+    		for j := 1; j < cols; j++ {
+    			if matrix[i][j] == 0 {
+    				matrix[i][0], matrix[0][j] = 0, 0
+    			}
+    		}
+    	}
+
+    	for i := rows - 1; i >= 0; i-- {
+    		for j := cols - 1; j > 0; j-- {
+    			if matrix[i][0] == 0 || matrix[0][j] == 0 {
+    				matrix[i][j] = 0
+    			}
+    		}
+    		if col0 == 0 {
+    			matrix[i][0] = 0
+    		}
+    	}
+    }

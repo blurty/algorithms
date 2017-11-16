@@ -80,6 +80,7 @@
 * [Spiral Order](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L40) - 矩阵螺旋序排列
 * [Generate Spiral Matrix](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L80) - 以螺旋序生成矩阵
 * [Search a 2D Matrix](https://github.com/BlurtHeart/algorithms/tree/master/matrix) - 查找有序矩阵中的元素
+* [Set Matrix Zeroes](https://github.com/BlurtHeart/algorithms/tree/master/matrix) - 矩阵置零
 
 ## Permtation And Combination
 
