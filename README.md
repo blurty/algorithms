@@ -58,6 +58,7 @@
 * [Maximum Subarray](https://github.com/BlurtHeart/algorithms/tree/master/array) - int数组子集的最大值
 * [Merge Interval](https://github.com/BlurtHeart/algorithms/tree/master/array) - 合并区间
 * [Insert Interval](https://github.com/BlurtHeart/algorithms/tree/master/array) - 插入新区间
+* [Text Justification](https://github.com/BlurtHeart/algorithms/tree/master/array) - 文本对齐
 
 ## LinkList Handle
 

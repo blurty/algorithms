@@ -11,6 +11,7 @@
     - [int数组子集的最大值](#int数组子集的最大值)
     - [合并区间](#合并区间)
     - [插入新区间](#插入新区间)
+    - [文本对齐](#文本对齐)
 
 ## 对有序数组去重
 
@@ -191,3 +192,36 @@ i = 3时，元素等于2，flag=1，此时它与位于i-1-flag=1处的元素2相
 ### 查看代码
 
 [传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/int_array.go#L57)
+
+## 文本对齐
+
+### 对齐规则
+
+Given an array of words and a length L, format the text such that each line has exactly L characters and is fully (left and right) justified.
+
+You should pack your words in a greedy approach; that is, pack as many words as you can in each line. Pad extra spaces ' ' when necessary so that each line has exactly L characters.
+
+Extra spaces between words should be distributed as evenly as possible. If the number of spaces on a line do not divide evenly between words, the empty slots on the left will be assigned more spaces than the slots on the right.
+
+For the last line of text, it should be left justified and no extra space is inserted between words.
+
+Note: Each word is guaranteed not to exceed L in length.
+
+### 例子
+
+输入：
+
+    words: ["This", "is", "an", "example", "of", "text", "justification."]
+    maxWidth: 16
+
+输出：
+
+    [
+        "This    is    an",
+        "example  of text",
+        "justification.  "
+    ]   
+
+### 查看代码
+
+[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/string_array.go#L31)
