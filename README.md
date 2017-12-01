@@ -91,6 +91,7 @@
 * [一串数字的排列组合](https://github.com/BlurtHeart/algorithms/tree/master/permutation_combination) - 一串数字的排列组合
 * [一串数字的排列组合去重后的结果](https://github.com/BlurtHeart/algorithms/tree/master/permutation_combination) - 一串数字的排列组合去重后的结果
 * [计算第k个组合](https://github.com/BlurtHeart/algorithms/tree/master/permutation_combination) - 计算第k个组合
+* [从n个数中取k个数的排列组合](https://github.com/BlurtHeart/algorithms/tree/master/permutation_combination) - 从n个数中取k个数的排列组合
 
 ## Maze
 

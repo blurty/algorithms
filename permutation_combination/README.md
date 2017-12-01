@@ -7,6 +7,7 @@
     - [一串数字的排列组合](#一串数字的排列组合)
     - [一串数字的排列组合去重后的结果](#一串数字的排列组合去重后的结果)
     - [计算第k个组合](#计算第k个组合)
+    - [从n个数中取k个数的排列组合](#n个数的排列组合)
 
 ## 括弧问题
 
@@ -73,3 +74,22 @@ Another example is ")()())", where the longest valid parentheses substring is "(
 ### 查看代码
 
 [查看代码](https://github.com/BlurtHeart/algorithms/blob/master/permutation_combination/permutation.go#L133)
+
+## n个数的排列组合
+
+> Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
+  For example,
+  If n = 4 and k = 2, a solution is:
+
+    [
+      [2,4],
+      [3,4],
+      [2,3],
+      [1,2],
+      [1,3],
+      [1,4],
+    ]
+
+### 查看代码
+
+[查看代码](https://github.com/BlurtHeart/algorithms/blob/master/permutation_combination/combination.go#L36)
