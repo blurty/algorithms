@@ -23,7 +23,7 @@
     n * (n-1) / 2 = O(n2)
 
 ### 代码
-[传送门](https://github.com/BlurtHeart/algorithms/blob/master/sort/sort.go#L3)    
+[传送门](https://github.com/blurty/algorithms/blob/master/sort/sort.go#L3)    
 
 
 ## 快速排序
@@ -55,7 +55,7 @@
 4. 有序序列：1, 2, 2, 3, 5
 
 ### 代码
-[传送门](https://github.com/BlurtHeart/algorithms/blob/master/sort/sort.go#L13) 
+[传送门](https://github.com/blurty/algorithms/blob/master/sort/sort.go#L13) 
 
 
 ## 插入排序之直接插入排序
@@ -78,7 +78,7 @@
     n * (n-1) / 2 = O(n2)
 
 ### 代码
-[传送门](https://github.com/BlurtHeart/algorithms/blob/master/sort/sort.go#L38) 
+[传送门](https://github.com/blurty/algorithms/blob/master/sort/sort.go#L38) 
 
 
 ## 插入排序之希尔排序
@@ -95,7 +95,7 @@
 
 ### 示例
 
-![](https://github.com/BlurtHeart/markdownphotos/blob/master/algorithms/shell-sort.jpg)
+![](https://github.com/blurty/markdownphotos/blob/master/algorithms/shell-sort.jpg)
 
 ### 算法实现
 
@@ -105,7 +105,7 @@
 
 ### 代码
 
-[传送门](https://github.com/BlurtHeart/algorithms/blob/master/sort/sort.go#L74) 
+[传送门](https://github.com/blurty/algorithms/blob/master/sort/sort.go#L74) 
 
 
 ## 选择排序
@@ -142,7 +142,7 @@
 
 ### 代码
 
-[传送门](https://github.com/BlurtHeart/algorithms/blob/master/sort/sort.go#L84) 
+[传送门](https://github.com/blurty/algorithms/blob/master/sort/sort.go#L84) 
 
 
 ## 双向选择排序
@@ -164,7 +164,7 @@
 
 ### 代码
 
-[传送门](https://github.com/BlurtHeart/algorithms/blob/master/sort/sort.go#L105) 
+[传送门](https://github.com/blurty/algorithms/blob/master/sort/sort.go#L105) 
 
 
 ## 选择排序之堆排序
@@ -175,7 +175,7 @@
 
 堆的定义如下：具有n个元素的序列（k1,k2,...,kn),当且仅当满足
 
-![](https://github.com/BlurtHeart/markdownphotos/blob/master/algorithms/heap-sort-defination.jpg)
+![](https://github.com/blurty/markdownphotos/blob/master/algorithms/heap-sort-defination.jpg)
 
 时称之为堆。由堆的定义可以看出，堆顶元素（即第一个元素）必为最小项（小顶堆）。
 
@@ -185,7 +185,7 @@ a) 大顶堆序列：（96, 83,27,38,11,09)
 
 b) 小顶堆序列：（12，36，24，85，47，30，53，91）
 
-![](https://github.com/BlurtHeart/markdownphotos/blob/master/algorithms/big-little-heap.jpg)
+![](https://github.com/blurty/markdownphotos/blob/master/algorithms/big-little-heap.jpg)
 
 初始时把要排序的n个数的序列看作是一棵顺序存储的二叉树（一维数组存储二叉树），调整它们的存储序，使之成为一个堆，将堆顶元素输出，得到n 个元素中最小(或最大)的元素，这时堆的根节点的数最小（或者最大）。然后对前面(n-1)个元素重新调整使之成为堆，输出堆顶元素，得到n 个元素中次小(或次大)的元素。依此类推，直到只有两个节点的堆，并对它们作交换，最后得到有n个节点的有序序列。称这个过程为堆排序。
 
@@ -206,7 +206,7 @@ b) 小顶堆序列：（12，36，24，85，47，30，53，91）
 
 称这个自根结点到叶子结点的调整过程为筛选。如图：
 
-![](https://github.com/BlurtHeart/markdownphotos/blob/master/algorithms/process-of-adjust-little-heap.jpg)
+![](https://github.com/blurty/markdownphotos/blob/master/algorithms/process-of-adjust-little-heap.jpg)
 
 
 再讨论对n 个元素初始建堆的过程。
@@ -219,7 +219,7 @@ b) 小顶堆序列：（12，36，24，85，47，30，53，91）
 
 如图建堆初始过程：无序序列：（49，38，65，97，76，13，27，49）
 
-![](https://github.com/BlurtHeart/markdownphotos/blob/master/algorithms/heap-sort-init.jpg)
+![](https://github.com/blurty/markdownphotos/blob/master/algorithms/heap-sort-init.jpg)
 
 ### 算法的实现
 
@@ -231,7 +231,7 @@ b) 小顶堆序列：（12，36，24，85，47，30，53，91）
 
 ### 代码
 
-[传送门](https://github.com/BlurtHeart/algorithms/blob/master/sort/sort.go#L128)
+[传送门](https://github.com/blurty/algorithms/blob/master/sort/sort.go#L128)
 
 ## 归并排序
 
@@ -296,4 +296,4 @@ b) 小顶堆序列：（12，36，24，85，47，30，53，91）
 
 ### 查看代码
 
-[传送门](https://github.com/BlurtHeart/algorithms/blob/master/sort/sort.go#L162)
+[传送门](https://github.com/blurty/algorithms/blob/master/sort/sort.go#L162)

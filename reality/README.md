@@ -34,7 +34,7 @@ compute how much water it is able to trap after raining.
 
 ### 查看代码
 
-[传送门](https://github.com/BlurtHeart/algorithms/tree/master/reality/reality.go#L7)
+[传送门](https://github.com/blurty/algorithms/tree/master/reality/reality.go#L7)
 
 ## Climbing Stairs
 
@@ -82,4 +82,4 @@ compute how much water it is able to trap after raining.
 
 ### 查看代码
 
-[传送门](https://github.com/BlurtHeart/algorithms/tree/master/reality/reality.go#L34)
+[传送门](https://github.com/blurty/algorithms/tree/master/reality/reality.go#L34)

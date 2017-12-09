@@ -40,7 +40,7 @@ the rotation.
 
 ### 算法以及代码
 
-[算法查看注释](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L10)
+[算法查看注释](https://github.com/blurty/algorithms/tree/master/matrix/matrix.go#L10)
 
 
 ## 逆时针旋转矩阵90度
@@ -73,7 +73,7 @@ the rotation.
 
 ### 算法以及代码
 
-[算法查看注释](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L28)
+[算法查看注释](https://github.com/blurty/algorithms/tree/master/matrix/matrix.go#L28)
 
 ## 矩阵以螺旋序排列
 
@@ -104,7 +104,7 @@ Given a matrix of m x n elements (m rows, n columns), return all elements of the
  when traverse left or up it has to check whether the row or col still exists to
  prevent duplicates.
 
-[查看算法](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L40)
+[查看算法](https://github.com/blurty/algorithms/tree/master/matrix/matrix.go#L40)
 
 ## 以螺旋序生成矩阵
 
@@ -139,7 +139,7 @@ Given a matrix of m x n elements (m rows, n columns), return all elements of the
 1. row > rowEnd，此时向右增长到边界，需要向下增长，同时重置下标值。colEnd--;row, col = rowEnd, colEnd; rowInc, colInc = 0, -1。
 2. 同上分析，分别可得出其他三种情况的取值。具体见代码。
 
-[查看算法](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L80)
+[查看算法](https://github.com/blurty/algorithms/tree/master/matrix/matrix.go#L80)
 
 ## 查找有序矩阵中的元素
 
@@ -154,7 +154,7 @@ Given a matrix of m x n elements (m rows, n columns), return all elements of the
 
 ### 代码实现
 
-[传送门](https://github.com/BlurtHeart/algorithms/tree/master/matrix/matrix.go#L123)
+[传送门](https://github.com/blurty/algorithms/tree/master/matrix/matrix.go#L123)
 
 ## 矩阵置零
 

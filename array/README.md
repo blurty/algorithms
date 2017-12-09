@@ -51,7 +51,7 @@ i = 3时，元素等于2，flag=1，此时它与位于i-1-flag=1处的元素2相
 
 于是，我们返回的数组长度就是原数组长度4减去去重的个数2 = 2.
 
-[查看代码](https://github.com/BlurtHeart/algorithms/tree/master/array/duplicate.go)
+[查看代码](https://github.com/blurty/algorithms/tree/master/array/duplicate.go)
 
 **为什么要拿每个元素跟i-1-flag处的元素作比较呢？**
 
@@ -73,7 +73,7 @@ i = 3时，元素等于2，flag=1，此时它与位于i-1-flag=1处的元素2相
 
 ### 查看代码
 
-[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/find.go#L4)
+[传送门](https://github.com/blurty/algorithms/tree/master/array/find.go#L4)
 
 ## 从数组首元素跳到尾元素
 
@@ -92,7 +92,7 @@ i = 3时，元素等于2，flag=1，此时它与位于i-1-flag=1处的元素2相
 
 ### 查看代码
 
-[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/find.go#L24)
+[传送门](https://github.com/blurty/algorithms/tree/master/array/find.go#L24)
 
 ## 判断数组是否可达
 
@@ -109,7 +109,7 @@ i = 3时，元素等于2，flag=1，此时它与位于i-1-flag=1处的元素2相
 
 ### 查看代码
 
-[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/find.go#L41)
+[传送门](https://github.com/blurty/algorithms/tree/master/array/find.go#L41)
 
 ## 字符串分组
 
@@ -127,7 +127,7 @@ i = 3时，元素等于2，flag=1，此时它与位于i-1-flag=1处的元素2相
 
 ### 查看代码
 
-[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/string_array.go#L9)
+[传送门](https://github.com/blurty/algorithms/tree/master/array/string_array.go#L9)
 
 ## int数组子集的最大值
 
@@ -141,7 +141,7 @@ i = 3时，元素等于2，flag=1，此时它与位于i-1-flag=1处的元素2相
 
 ### 查看代码
 
-[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/int_array.go#L8)
+[传送门](https://github.com/blurty/algorithms/tree/master/array/int_array.go#L8)
 
 ## 合并区间
 
@@ -167,7 +167,7 @@ i = 3时，元素等于2，flag=1，此时它与位于i-1-flag=1处的元素2相
 
 ### 查看代码
 
-[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/int_array.go#L34)
+[传送门](https://github.com/blurty/algorithms/tree/master/array/int_array.go#L34)
 
 ## 插入新区间
 
@@ -191,7 +191,7 @@ i = 3时，元素等于2，flag=1，此时它与位于i-1-flag=1处的元素2相
 
 ### 查看代码
 
-[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/int_array.go#L57)
+[传送门](https://github.com/blurty/algorithms/tree/master/array/int_array.go#L57)
 
 ## 文本对齐
 
@@ -224,4 +224,4 @@ Note: Each word is guaranteed not to exceed L in length.
 
 ### 查看代码
 
-[传送门](https://github.com/BlurtHeart/algorithms/tree/master/array/string_array.go#L31)
+[传送门](https://github.com/blurty/algorithms/tree/master/array/string_array.go#L31)

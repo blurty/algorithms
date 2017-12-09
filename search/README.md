@@ -12,4 +12,4 @@
 
 ### 代码
 
-[查看代码](https://github.com/BlurtHeart/algorithms/blob/master/search/search.go#L4)
+[查看代码](https://github.com/blurty/algorithms/blob/master/search/search.go#L4)

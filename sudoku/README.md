@@ -63,4 +63,4 @@
 
 ### 代码
 
-[传送门](https://github.com/BlurtHeart/algorithms/tree/master/sudoku/utils.go#L67)
+[传送门](https://github.com/blurty/algorithms/tree/master/sudoku/utils.go#L67)

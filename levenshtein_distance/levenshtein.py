@@ -2,7 +2,7 @@
     levenshtein distance
     ~~~~~~~~~~~~~~~~~~~
     calculate levenshtein distance between two strings.
-    :copyright: (c) 2017 by Blurt Heart.
+    :copyright: (c) 2017 by blurty.
     :license: BSD, see LICENSE for more details.
 """
 

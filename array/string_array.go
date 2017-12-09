@@ -3,7 +3,7 @@ package array
 import (
 	"strings"
 
-	"github.com/blurtheart/mylib/strutils"
+	"github.com/blurty/mylib/strutils"
 )
 
 // Given an array of strings, group anagrams together.

@@ -17,7 +17,7 @@
 For "(()", the longest valid parentheses substring is "()", which has length = 2.
 Another example is ")()())", where the longest valid parentheses substring is "()()", which has length = 4.
 
-[查看代码](https://github.com/BlurtHeart/algorithms/blob/master/permutation_combination/parentheses.go#L80)
+[查看代码](https://github.com/blurty/algorithms/blob/master/permutation_combination/parentheses.go#L80)
 
 ## 一串数字的排列组合
 
@@ -36,7 +36,7 @@ Another example is ")()())", where the longest valid parentheses substring is "(
 
 ### 查看代码
 
-[查看代码](https://github.com/BlurtHeart/algorithms/blob/master/permutation_combination/permutation.go#L47)
+[查看代码](https://github.com/blurty/algorithms/blob/master/permutation_combination/permutation.go#L47)
 
 ## 一串数字的排列组合去重后的结果
 
@@ -52,7 +52,7 @@ Another example is ")()())", where the longest valid parentheses substring is "(
 
 ### 查看代码
 
-[查看代码](https://github.com/BlurtHeart/algorithms/blob/master/permutation_combination/permutation.go#L73)
+[查看代码](https://github.com/blurty/algorithms/blob/master/permutation_combination/permutation.go#L73)
 
 ## 计算第k个组合
 
@@ -73,7 +73,7 @@ Another example is ")()())", where the longest valid parentheses substring is "(
 
 ### 查看代码
 
-[查看代码](https://github.com/BlurtHeart/algorithms/blob/master/permutation_combination/permutation.go#L133)
+[查看代码](https://github.com/blurty/algorithms/blob/master/permutation_combination/permutation.go#L133)
 
 ## n个数的排列组合
 
@@ -92,4 +92,4 @@ Another example is ")()())", where the longest valid parentheses substring is "(
 
 ### 查看代码
 
-[查看代码](https://github.com/BlurtHeart/algorithms/blob/master/permutation_combination/combination.go#L36)
+[查看代码](https://github.com/blurty/algorithms/blob/master/permutation_combination/combination.go#L36)

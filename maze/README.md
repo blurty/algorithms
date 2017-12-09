@@ -27,7 +27,7 @@
 
 ### 代码
 
-[查看算法](https://github.com/BlurtHeart/algorithms/tree/master/maze/maze.go#L7)
+[查看算法](https://github.com/blurty/algorithms/tree/master/maze/maze.go#L7)
 
 ## 在有障碍的矩阵中寻找路径总数
 
@@ -48,7 +48,7 @@
 
 ### 代码
 
-[查看算法](https://github.com/BlurtHeart/algorithms/tree/master/maze/maze.go#L38)
+[查看算法](https://github.com/blurty/algorithms/tree/master/maze/maze.go#L38)
 
 ## 计算最小路径总值
 
@@ -150,4 +150,4 @@
 
 ### 代码
 
-[查看算法](https://github.com/BlurtHeart/algorithms/tree/master/maze/maze.go#L60)
+[查看算法](https://github.com/blurty/algorithms/tree/master/maze/maze.go#L60)
