@@ -106,4 +106,5 @@
 *现实问题*
 
 * [Trapping Rain Water](https://github.com/blurty/algorithms/tree/master/reality) - 蓄水问题
-* [Climbing Stairs](https://github.com/blurty/algorithms/tree/master/maze) - 爬楼梯问题
+* [Climbing Stairs](https://github.com/blurty/algorithms/tree/master/reality) - 爬楼梯问题
+* [Word Search](https://github.com/blurty/algorithms/tree/master/reality) - 查找单词

@@ -40,3 +40,47 @@ func TestClimbStairs(t *testing.T) {
 		}
 	}
 }
+
+func TestIsWordExists(t *testing.T) {
+	type tester struct {
+		board  [][]byte
+		word   string
+		result bool
+	}
+	board := [][]byte{
+		[]byte{'A', 'B', 'C', 'E'},
+		[]byte{'S', 'F', 'C', 'S'},
+		[]byte{'A', 'D', 'E', 'E'},
+	}
+	tests := []tester{
+		tester{
+			board:  board,
+			word:   "ABCCED",
+			result: true,
+		},
+		tester{
+			board:  board,
+			word:   "SEE",
+			result: true,
+		},
+		tester{
+			board:  board,
+			word:   "ABCB",
+			result: false,
+		},
+		tester{
+			board: [][]byte{
+				[]byte{'a', 'b'},
+				[]byte{'c', 'd'},
+			},
+			word:   "acdb",
+			result: true,
+		},
+	}
+	for _, v := range tests {
+		got := IsWordExists(v.board, v.word)
+		if got != v.result {
+			t.Errorf("word:%v, want:%v, got:%v", v.word, v.result, got)
+		}
+	}
+}

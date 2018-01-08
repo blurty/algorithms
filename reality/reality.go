@@ -51,3 +51,85 @@ func ClimbStairs(n int) int {
 	}
 	return allWays
 }
+
+// Given a 2D board and a word, find if the word exists in the grid.
+// The word can be constructed from letters of sequentially adjacent
+// cell, where "adjacent" cells are those horizontally or vertically
+// neighboring. The same letter cell may not be used more than once.
+func IsWordExists(board [][]byte, word string) bool {
+	if word == "" {
+		return true
+	}
+	if board == nil {
+		return false
+	}
+
+	visit := make([][]bool, len(board))
+	for i := 0; i < len(board); i++ {
+		visit[i] = make([]bool, len(board[i]))
+	}
+	for i := 0; i < len(board); i++ {
+		for j := 0; j < len(board[0]); j++ {
+			if board[i][j] == word[0] {
+				if len(word) == 1 {
+					return true
+				} else {
+					visit[i][j] = true
+					if recursiveSearch(board, visit, word[1:], i, j) {
+						return true
+					}
+					visit[i][j] = false
+				}
+			}
+		}
+	}
+	return false
+}
+
+// recursive search each byte of word in board
+func recursiveSearch(board [][]byte, visit [][]bool, word string, x, y int) bool {
+	if word == "" {
+		return true
+	}
+	if x > 0 && !visit[x-1][y] && board[x-1][y] == word[0] {
+		if len(word) == 1 {
+			return true
+		}
+		visit[x-1][y] = true
+		if recursiveSearch(board, visit, word[1:], x-1, y) {
+			return true
+		}
+		visit[x-1][y] = false
+	}
+	if x+1 < len(board) && !visit[x+1][y] && board[x+1][y] == word[0] {
+		if len(word) == 1 {
+			return true
+		}
+		visit[x+1][y] = true
+		if recursiveSearch(board, visit, word[1:], x+1, y) {
+			return true
+		}
+		visit[x+1][y] = false
+	}
+	if y > 0 && !visit[x][y-1] && board[x][y-1] == word[0] {
+		if len(word) == 1 {
+			return true
+		}
+		visit[x][y-1] = true
+		if recursiveSearch(board, visit, word[1:], x, y-1) {
+			return true
+		}
+		visit[x][y-1] = false
+	}
+	if y+1 < len(board[0]) && !visit[x][y+1] && board[x][y+1] == word[0] {
+		if len(word) == 1 {
+			return true
+		}
+		visit[x][y+1] = true
+		if recursiveSearch(board, visit, word[1:], x, y+1) {
+			return true
+		}
+		visit[x][y+1] = false
+	}
+	return false
+}

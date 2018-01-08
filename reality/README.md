@@ -5,6 +5,7 @@
 - [现实问题](#现实问题)
     - [蓄水](#trapping-rain-water)
     - [爬楼梯](#climbing-stairs)
+    - [查找单词](#search-word)
 
 ## Trapping Rain Water
 
@@ -83,3 +84,32 @@ compute how much water it is able to trap after raining.
 ### 查看代码
 
 [传送门](https://github.com/blurty/algorithms/tree/master/reality/reality.go#L34)
+
+## Search Word
+
+*在二维数组中查找单词*
+
+### 问题描述
+
+给一个二维数组以及一个单词，查找单词是否存在。要求单词必须由相邻单元格的字母组成，所谓相邻指
+单元格的四邻域。没个单元格不可重复使用。
+
+### 示例
+
+示例一：
+
+二维数组为：
+
+    [
+        ['A','B','C','E'],
+        ['S','F','C','S'],
+        ['A','D','E','E']
+    ]
+
+- word = "ABCCED", -> returns true,
+- word = "SEE", -> returns true,
+- word = "ABCB", -> returns false.
+
+### 查看代码
+
+[传送门](https://github.com/blurty/algorithms/tree/master/reality/reality.go#L59)
