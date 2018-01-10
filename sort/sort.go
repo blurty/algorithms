@@ -201,6 +201,35 @@ func merge(r, rf []int, i, m, n int) {
 	}
 }
 
+// another implement for merge sort
+func MergeSort2(data []int) {
+	if len(data) < 2 {
+		return
+	}
+	length := len(data)
+	ret := make([]int, 0, length)
+	mid := length / 2
+	i, j := 0, mid
+	MergeSort2(data[:mid])
+	MergeSort2(data[mid:])
+	for i < mid && j < length {
+		if data[i] < data[j] {
+			ret = append(ret, data[i])
+			i++
+		} else {
+			ret = append(ret, data[j])
+			j++
+		}
+	}
+	if i < mid {
+		ret = append(ret, data[i:mid]...)
+	}
+	if j < length {
+		ret = append(ret, data[j:]...)
+	}
+	copy(data, ret)
+}
+
 // another implement for quick sort
 func QuickSort2(data []int) {
 	if len(data) < 2 {
