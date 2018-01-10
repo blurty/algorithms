@@ -200,3 +200,48 @@ func merge(r, rf []int, i, m, n int) {
 		k++
 	}
 }
+
+// another implement for quick sort
+func QuickSort2(data []int) {
+	if len(data) < 2 {
+		return
+	}
+	head, tail := 0, len(data)-1
+	i := 1
+	for head < tail {
+		if data[i] < data[head] {
+			data[i], data[head] = data[head], data[i]
+			i++
+			head++
+		} else {
+			data[i], data[tail] = data[tail], data[i]
+			tail--
+		}
+	}
+	QuickSort2(data[:head])
+	QuickSort2(data[head+1:])
+}
+
+// improvement of quick sort
+func QuickSort3(data []int) {
+	if len(data) < 2 {
+		return
+	} else if len(data) == 2 {
+		if data[0] > data[1] {
+			data[1], data[0] = data[0], data[1]
+		}
+		return
+	}
+	head, tail := 0, len(data)-1
+	mid := (data[0] + data[tail] + data[(tail+1)/2]) / 3
+	for head <= tail {
+		if data[head] <= mid {
+			head++
+		} else {
+			data[head], data[tail] = data[tail], data[head]
+			tail--
+		}
+	}
+	QuickSort3(data[:head])
+	QuickSort3(data[head:])
+}
