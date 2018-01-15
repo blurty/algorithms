@@ -230,6 +230,44 @@ func MergeSort2(data []int) {
 	copy(data, ret)
 }
 
+func merge3(r1, r2 []int) []int {
+	ret := make([]int, 0, len(r1)+len(r2))
+	i, j := 0, 0
+	for i < len(r1) && j < len(r2) {
+		if r1[i] <= r2[j] {
+			ret = append(ret, r1[i])
+			i++
+		} else {
+			ret = append(ret, r2[j])
+			j++
+		}
+	}
+	if i < len(r1) {
+		ret = append(ret, r1[i:]...)
+	}
+	if j < len(r2) {
+		ret = append(ret, r2[j:]...)
+	}
+	return ret
+}
+
+// use iteration instead of recursion
+func MergeSort3(data []int) {
+	if len(data) < 2 {
+		return
+	}
+	length := len(data)
+	for step := 1; step <= length/2; step *= 2 {
+		for i := 0; i < length-step; i += 2 * step {
+			if i+2*step > length-1 {
+				copy(data[i:], merge3(data[i:i+step], data[i+step:]))
+			} else {
+				copy(data[i:i+2*step], merge3(data[i:i+step], data[i+step:i+2*step]))
+			}
+		}
+	}
+}
+
 // another implement for quick sort
 func QuickSort2(data []int) {
 	if len(data) < 2 {
