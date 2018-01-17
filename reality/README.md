@@ -7,6 +7,7 @@
     - [爬楼梯](#climbing-stairs)
     - [查找单词](#search-word)
     - [计算最大矩形面积](#Largest-Rectangle-Area)
+    - [寻找矩阵中的最大矩形](#Maximal-Rectangle)
 
 ## Trapping Rain Water
 
@@ -134,3 +135,26 @@ return 10.
 ### 查看代码
 
 [传送门](https://github.com/blurty/algorithms/tree/master/reality/reality.go#L140)
+
+## Maximal Rectangle
+
+*寻找矩阵中的最大矩形*
+
+### 问题描述
+
+给一个0和1组成的矩阵，寻找由1组成的最大矩形。
+
+### 示例
+
+For example,
+
+    1 0 1 0 0
+    1 0 1 1 1
+    1 1 1 1 1
+    1 0 0 1 0
+
+Return 6.
+
+### 查看代码
+
+[传送门](https://github.com/blurty/algorithms/tree/master/reality/reality.go#L164)

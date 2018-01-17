@@ -85,7 +85,7 @@ func TestIsWordExists(t *testing.T) {
 	}
 }
 
-func TestLargestRectangleAread(t *testing.T) {
+func TestLargestRectangleArea(t *testing.T) {
 	type tester struct {
 		heights []int
 		maxArea int
@@ -98,6 +98,30 @@ func TestLargestRectangleAread(t *testing.T) {
 	}
 	for _, v := range tests {
 		got := LargestRectangleArea(v.heights)
+		if got != v.maxArea {
+			t.Errorf("want:%v, got:%v", v.maxArea, got)
+		}
+	}
+}
+
+func TestMaximalRectangle(t *testing.T) {
+	type tester struct {
+		matrix  [][]byte
+		maxArea int
+	}
+	tests := []tester{
+		tester{
+			matrix: [][]byte{
+				[]byte("10100"),
+				[]byte("10111"),
+				[]byte("11111"),
+				[]byte("10010"),
+			},
+			maxArea: 6,
+		},
+	}
+	for _, v := range tests {
+		got := MaximalRectangle(v.matrix)
 		if got != v.maxArea {
 			t.Errorf("want:%v, got:%v", v.maxArea, got)
 		}

@@ -109,3 +109,4 @@
 * [Climbing Stairs](https://github.com/blurty/algorithms/tree/master/reality) - 爬楼梯问题
 * [Word Search](https://github.com/blurty/algorithms/tree/master/reality) - 查找单词
 * [Largest Rectangle Area](https://github.com/blurty/algorithms/tree/master/reality) - 寻找最大矩形面积
+* [Maximal Rectangle](https://github.com/blurty/algorithms/tree/master/reality) - 寻找矩阵中的最大矩形

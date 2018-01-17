@@ -158,3 +158,39 @@ func LargestRectangleArea(heights []int) int {
 	}
 	return max
 }
+
+// Given a 2D binary matrix filled with 0's and 1's, find the largest rectangle
+// containing only 1's and return its area.
+func MaximalRectangle(matrix [][]byte) int {
+	if len(matrix) == 0 {
+		return 0
+	}
+	h := make([]int, len(matrix[0])+1)
+	var max int
+	for i := 0; i < len(matrix); i++ {
+		stack := make([]int, 0, len(matrix[0]))
+		for j := 0; j < len(matrix[0])+1; j++ {
+			if j < len(matrix[0]) {
+				if matrix[i][j] == '1' {
+					h[j]++
+				} else {
+					h[j] = 0
+				}
+			}
+			for len(stack) > 0 && h[stack[len(stack)-1]] > h[j] {
+				top := stack[len(stack)-1]
+				stack = stack[:len(stack)-1]
+				startIdx := -1
+				if len(stack) > 0 {
+					startIdx = stack[len(stack)-1]
+				}
+				area := h[top] * (j - startIdx - 1)
+				if area > max {
+					max = area
+				}
+			}
+			stack = append(stack, j)
+		}
+	}
+	return max
+}
