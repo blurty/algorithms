@@ -6,6 +6,7 @@
     - [蓄水](#trapping-rain-water)
     - [爬楼梯](#climbing-stairs)
     - [查找单词](#search-word)
+    - [计算最大矩形面积](#Largest-Rectangle-Area)
 
 ## Trapping Rain Water
 
@@ -113,3 +114,23 @@ compute how much water it is able to trap after raining.
 ### 查看代码
 
 [传送门](https://github.com/blurty/algorithms/tree/master/reality/reality.go#L59)
+
+## Largest Rectangle Area
+
+*寻找最大的矩形面积*
+
+### 问题描述
+
+给一个高度数组组成的一系列相邻矩形，计算这一系列相邻矩形所能组成的最大矩形面积。
+
+### 示例
+
+For example,
+
+Given heights = [2,1,5,6,2,3],
+
+return 10.
+
+### 查看代码
+
+[传送门](https://github.com/blurty/algorithms/tree/master/reality/reality.go#L140)

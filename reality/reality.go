@@ -133,3 +133,28 @@ func recursiveSearch(board [][]byte, visit [][]bool, word string, x, y int) bool
 	}
 	return false
 }
+
+// Given n non-negative integers representing the histogram's bar height
+// where the width of each bar is 1, find the area of largest rectangle
+// in the histogram.
+func LargestRectangleArea(heights []int) int {
+	stack := make([]int, 0, len(heights))
+	heights = append(heights, 0) // append 0 to assure calculation down
+	var max int
+	for i, h := range heights {
+		for len(stack) > 0 && heights[stack[len(stack)-1]] > h {
+			height := heights[stack[len(stack)-1]]
+			stack = stack[:len(stack)-1]
+			startIdx := -1
+			if len(stack) > 0 {
+				startIdx = stack[len(stack)-1]
+			}
+			area := height * (i - startIdx - 1)
+			if area > max {
+				max = area
+			}
+		}
+		stack = append(stack, i)
+	}
+	return max
+}
