@@ -19,3 +19,14 @@ func TestDivide(t *testing.T) {
 		}
 	}
 }
+
+func TestArithmetic(t *testing.T) {
+	expression := "20+3*(5+4)/3"
+	result, err := Arithmetic(expression)
+	if err != nil {
+		t.Error(err)
+	}
+	if result != 29 {
+		t.Fatalf("expression %s want:11, got:%d\n", expression, result)
+	}
+}
