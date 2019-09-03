@@ -76,6 +76,43 @@ func IsValid(s string) bool {
 	return false
 }
 
+
+func isValidSwitch(s string) bool {
+	m := make([]rune, 0)
+	for _, c := range s {
+		if len(m) == 0 {
+			m = append(m, c)
+			continue
+		}
+		p := m[len(m)-1]
+		switch c {
+		case '{', '[', '(':
+			m = append(m, c)
+		case ')':
+			if p != '(' {
+				return false
+			}
+			m = m[:len(m)-1]
+		case ']':
+			if p != '[' {
+				return false
+			}
+			m = m[:len(m)-1]
+		case '}':
+			if p != '{' {
+				return false
+			}
+			m = m[:len(m)-1]
+		default:
+			panic("unknown character")
+		}
+	}
+	if len(m) == 0 {
+		return true
+	}
+	return false
+}
+
 // return the length of the longest valid parentheses substring
 func LongestValidParentheses(s string) int {
 	length := len(s)
